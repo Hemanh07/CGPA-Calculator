@@ -51,4 +51,10 @@ form{
 #result{
     border: 5px double black;
     height:max-content;
+    width: max-content;
+}
+#resultout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

@@ -1,60 +1,22 @@
-*{
-    margin: 3px;
-}
-body{
-    background-color:grey;
-}
-header{
-    display: flex;
-    border:3px solid black;
-    border-top-right-radius: 10px;
-    width:max-content;
-    font-size: 20px;
-    background-color: black;
-    color: aqua;
-}
-ul{
-    padding-left: 0;
-}
-#headout,#outer{
-    display: flex;
-    justify-content: center;
-    
-}
-form{
-    border: 5px black double;
-    width: max-content;
-    display: block;
-    padding-left: 0;
-}
-#calculate{
-    display: flex;
-    background-color: black;
-    color: aqua;
-    border: 2px solid white;
-    width: max-content;
-    font-size: 15px;
-}
-#calculate:hover{
-    font-size: 20px;
-    color: red;
-}
-#outbox{
-    min-height: 20px;
-    max-width: 50px;
-    background-color: black;
-    color: aqua;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#result{
-    border: 5px double black;
-    height:max-content;
-    width: max-content;
-}
-#resultout{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+const calculate=document.getElementById("calculate");
+const result=document.getElementById("outbox");
+calculate.addEventListener("click",(event)=>{
+    const physics=document.getElementById("physics").value;
+    const chemistry=document.getElementById("chemistry").value;
+    const pspp=document.getElementById("pspp").value;
+    const english=document.getElementById("english").value;
+    const tamil=document.getElementById("tamil").value;
+    const maths=document.getElementById("maths").value;
+    console.log(physics);
+    console.log(chemistry);
+    console.log(maths);
+    console.log(english);
+    console.log(tamil);
+    console.log(pspp);
+    const total =(cal(physics)*3+cal(chemistry)*3+cal(maths)*4+cal(pspp)*3+cal(tamil)+cal(english)*3+50)/22;
+    result.innerHTML=total;
+},false);
+let cal=function(score){
+    score=(score*100)/60;
+    return score/10 ;
 }

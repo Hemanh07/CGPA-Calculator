@@ -14,7 +14,7 @@ calculate.addEventListener("click",(event)=>{
     console.log(tamil);
     console.log(pspp);
     const total =(cal(physics)*3+cal(chemistry)*3+cal(maths)*4+cal(pspp)*3+cal(tamil)+cal(english)*3+50)/22;
-    result.innerHTML=total;
+    result.innerHTML=total.toFixed(3);
 },false);
 let cal=function(score){
     score=(score*100)/60;

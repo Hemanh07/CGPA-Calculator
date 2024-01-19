@@ -17,6 +17,6 @@ calculate.addEventListener("click",(event)=>{
     result.innerHTML=total.toFixed(3);
 },false);
 let cal=function(score){
-    score=(score*100)/65;
+    score=(score*100)/60;
     return score/10 ;
 }
